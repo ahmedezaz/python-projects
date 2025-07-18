@@ -1,4 +1,4 @@
-#Simple calculator using two input
+#Simple calculator using two inputs as a beginner 
 a = int(input("Enter first number: "))
 b = int(input("Enter second number: "))
 op = input("Enter operator: ")
