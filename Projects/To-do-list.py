@@ -23,6 +23,10 @@ while num  != 0:
     elif num == 2:
         print("delete task")
         boiler()
+        print("which one want to delete: ")
+        dl = int(input())
+        item_list.pop(dl-1)
+        boiler()
         num = int(input())
 #Show all items
     elif num == 3:
