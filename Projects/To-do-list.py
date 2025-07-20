@@ -9,23 +9,30 @@ def boiler():
     print("Enter your choice: ")
 boiler()
 
+#Add function-------------------
+def add():
+    item = input("Enter item: ")
+    item_list.append(item)
+    print(item_list)
+
+#Delete function-----------------
+def dell():
+    dl = int(input())
+    item_list.pop(dl - 1)
+
 num = int(input())
 item_list = []
+
 while num  != 0:
 #Add items
     if num == 1:
-        item = input("Enter item: ")
-        item_list.append(item)
-        print(item_list)
+        add()
         boiler()
         num = int(input())
 #Delete items
     elif num == 2:
-        print("delete task")
-        boiler()
         print("which one want to delete: ")
-        dl = int(input())
-        item_list.pop(dl-1)
+        dell()
         boiler()
         num = int(input())
 #Show all items
