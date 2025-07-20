@@ -1,5 +1,5 @@
 #Simple to do list using loop and list
-
+item_list = []
 def boiler():
     print("Please select the following option")
     print("1. Add a new task")
@@ -8,25 +8,30 @@ def boiler():
     print("0. quit")
     print("Enter your choice: ")
 boiler()
-
 num = int(input())
-item_list = []
+
+#Add function-------------------
+def add():
+    item = input("Enter item: ")
+    item_list.append(item)
+    print(item_list)
+    boiler()
+
+#Delete function-----------------
+def delete():
+    print("which one want to delete: ")
+    dl = int(input())
+    item_list.pop(dl - 1)
+    boiler()
+
 while num  != 0:
 #Add items
     if num == 1:
-        item = input("Enter item: ")
-        item_list.append(item)
-        print(item_list)
-        boiler()
+        add()
         num = int(input())
 #Delete items
     elif num == 2:
-        print("delete task")
-        boiler()
-        print("which one want to delete: ")
-        dl = int(input())
-        item_list.pop(dl-1)
-        boiler()
+        delete()
         num = int(input())
 #Show all items
     elif num == 3:
